@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "VersaPlayer",
+        "repositoryURL": "https://github.com/Piorosen/VersaPlayer",
+        "state": {
+          "branch": null,
+          "revision": "daca24ff29849a4926cf65c9d503dba64ddb5c9e",
+          "version": "4.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
