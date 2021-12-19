@@ -11,15 +11,15 @@ import AVFoundation
 import UIKit
 import VersaPlayer
 
-public extension VersaPlayer {
+public extension VersaPlayerView {
     
-    public var airplayManager: VersaPlayerAirplayManager? {
+    var airplayManager: VersaPlayerAirplayManager? {
         let adManager = getExtension(with: "airplayManager") as? VersaPlayerAirplayManager
         return adManager
     }
     
-    public func useAirplay(manager: VersaPlayerAirplayManager) {
-        addExtension(extension: manager, with: "airplayManager")
+    func useAirplay(manager: VersaPlayerAirplayManager) {
+        self.addExtension(extension: manager, with: "airplayManager")
     }
     
 }

@@ -18,10 +18,10 @@ public class VersaPlayerAirplayManager: VersaPlayerExtension {
         player.player.usesExternalPlaybackWhileExternalScreenIsActive = true
         let audioSession = AVAudioSession.sharedInstance()
         if #available(iOS 11.0, *) {
-            try? audioSession.setCategory(AVAudioSessionCategorySoloAmbient, mode: AVAudioSessionModeMoviePlayback, routeSharingPolicy: AVAudioSessionRouteSharingPolicy.longForm, options: AVAudioSessionCategoryOptions.allowAirPlay)
+            try? audioSession.setCategory(AVAudioSession.Category.soloAmbient, mode: AVAudioSession.Mode.moviePlayback, policy: AVAudioSession.RouteSharingPolicy.longForm, options: AVAudioSession.CategoryOptions.allowAirPlay)
         } else {
             if #available(iOS 10.0, *) {
-                try? audioSession.setCategory(AVAudioSessionCategorySoloAmbient, with: AVAudioSessionCategoryOptions.allowAirPlay)
+                try? audioSession.setCategory(AVAudioSession.Category.soloAmbient, options: AVAudioSession.CategoryOptions.allowAirPlay)
             } else {
                 // Fallback on earlier versions
             }
